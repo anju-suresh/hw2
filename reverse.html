@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <h3>Reverse a Number</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <table class="table table-borderless">
+                        <tr>
+                            <td class="font-weight-borderless">Number</td>
+                            <td><input type="text" class="form-control" id="num"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" onclick="reverse();" class="btn btn-success">Reverse</button></td>
+                        </tr>
+                        <tr>
+                            <td><p id="res"></p></td>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function reverse(){
+            var n=parseInt(document.getElementById("num").value);
+            var rev=0;
+            var rem=0;
+            while(n!=0){
+                rem=n%10;
+                rev=rev*10+rem;
+                n=parseInt(n/10);
+
+            }
+            document.getElementById("res").innerHTML="Number Reversed"
+            document.getElementById("result").innerHTML=rev;
+        }
+    </script>
+</body>
+</html>
